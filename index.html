@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TINOK Token – Preventa Inspiracional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TINOK Token – Preventa Inspiracional</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+<style>
     body {margin:0; font-family:'Poppins', sans-serif; background:#f0f3f8; color:#333;}
     header.hero {
       background: url('hero_background.jpg') no-repeat center/cover;
@@ -24,30 +25,26 @@
   </style>
 </head>
 <body>
-
 <div style="position: absolute; top: 20px; left: 20px;">
-  <img src="logo.png" alt="TINOK Logo" style="width:80px;">
+
 </div>
+<!-- Header / Hero -->
+<header class="hero">
 
-  <!-- Header / Hero -->
-  <header class="hero">
-    <img src="logo.png" alt="TINOK Logo" style="max-width:120px; margin-bottom:20px;">
-    <h1>Preventa exclusiva de TINOK Token</h1>
-    <p>Invierte en una misión que transforma almas, despierta propósito y nutre el bienestar integral.</p>
-    <button class="btn-primary" onclick="connectWallet()">Conectar Metamask</button>
-    <div class="countdown" id="countdown">⏳ Cargando... ⏳</div>
-  </header>
-
-  <!-- Sección compra -->
-  <section class="section" id="buy-section">
-    <h2>Comprar tokens TINOK</h2>
-    <p>1 USDT = 1 TIN • Min. 20 TIN</p>
-    <input type="number" id="amount" placeholder="Cantidad (mínimo 20)" min="20">
-    <br><button class="btn-primary" onclick="buyTokens()">Comprar con USDT</button>
-    <p id="status"></p>
-  </section>
-
-  <script>
+<h1 style="margin-top:100px;">Preventa exclusiva de TINOK Token</h1>
+<p>Invierte en una misión que transforma almas, despierta propósito y nutre el bienestar integral.</p>
+<button class="btn-primary" onclick="connectWallet()" style="position:absolute; top:120px; left:40px; padding:20px 40px; font-size:1.2rem;">Conectar Metamask</button>
+<div class="countdown" id="countdown" style="position:absolute; top:120px; right:40px; font-size:1.4rem; font-weight:600; color:white;">⏳ Cargando... ⏳</div>
+</header>
+<!-- Sección compra -->
+<section class="section" id="buy-section">
+<h2>Comprar tokens TINOK</h2>
+<p>1 USDT = 1 TIN • Min. 20 TIN</p>
+<input id="amount" min="20" placeholder="Cantidad (mínimo 20)" type="number"/>
+<br/><button class="btn-primary" onclick="buyTokens()">Comprar con USDT</button>
+<p id="status"></p>
+</section>
+<script>
     // Conteo regresivo (por ejemplo 1 de agosto)
     const endDate = new Date('2025-08-01T00:00:00Z');
     const cdEl = document.getElementById('countdown');
