@@ -24,17 +24,15 @@
     .section h2 {font-size:2rem; color:#2e7d32; margin-bottom:20px;}
   </style>
 </head>
-<body>
+<body><div style="position: absolute; top: 20px; left: 20px;"><img alt="TINOK Logo" src="logo.png" style="width:80px;"/></div>
 <div style="position: absolute; top: 20px; left: 20px;">
-
 </div>
 <!-- Header / Hero -->
 <header class="hero">
-
 <h1 style="margin-top:100px;">Preventa exclusiva de TINOK Token</h1>
 <p>Invierte en una misión que transforma almas, despierta propósito y nutre el bienestar integral.</p>
-<button class="btn-primary" onclick="connectWallet()" style="position:absolute; top:120px; left:40px; padding:20px 40px; font-size:1.2rem;">Conectar Metamask</button>
-<div class="countdown" id="countdown" style="position:absolute; top:120px; right:40px; font-size:1.4rem; font-weight:600; color:white;">⏳ Cargando... ⏳</div>
+<button class="btn-primary" onclick="connectWallet()" style="position:fixed; bottom:30px; left:30px; padding:20px 40px; font-size:1.2rem; z-index:999;">Conectar Metamask</button>
+<div class="countdown" id="countdown" style="position:fixed; bottom:30px; right:30px; font-size:1.4rem; font-weight:600; color:white; z-index:999;">⏳ Cargando... ⏳</div>
 </header>
 <!-- Sección compra -->
 <section class="section" id="buy-section">
