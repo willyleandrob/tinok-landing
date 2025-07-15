@@ -1,100 +1,47 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TINOK Token – Preventa Inspiracional</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
-<style>
-    body {margin:0; font-family:'Poppins', sans-serif; background:#f0f3f8; color:#333;}
-    header.hero {
-      background: url('hero_background.jpg') no-repeat center/cover;
-      color:#fff; text-align:center; padding:120px 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TINOK Token</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-    header.hero h1 { font-size:2.8rem; margin-bottom:20px; font-weight:700; }
-    header.hero p { font-size:1.2rem; max-width:600px; margin:0 auto 30px; }
-    .btn-primary {
-      background:#00c853; color:#fff; border:none; padding:15px 30px;
-      font-size:1.1rem; border-radius:6px; cursor:pointer;
+    section {
+      width: 100%;
     }
-    .countdown {margin-top:20px; font-size:1.4rem; font-weight:600;}
-    .section {padding:80px 20px; text-align:center;}
-    .section h2 {font-size:2rem; color:#2e7d32; margin-bottom:20px;}
   </style>
 </head>
-<body><div style="position: absolute; top: 20px; left: 20px;"><img alt="TINOK Logo" src="logo.png" style="width:80px;"/></div>
-<div style="position: absolute; top: 20px; left: 20px;">
-</div>
-<!-- Header / Hero -->
-<header class="hero">
-<h1 style="margin-top:100px;">Preventa exclusiva de TINOK Token</h1>
-<p>Invierte en una misión que transforma almas, despierta propósito y nutre el bienestar integral.</p>
-<button class="btn-primary" onclick="connectWallet()" style="position:fixed; bottom:30px; left:30px; padding:20px 40px; font-size:1.2rem; z-index:999;">Conectar Metamask</button>
-<div class="countdown" id="countdown" style="position:fixed; bottom:30px; right:30px; font-size:1.4rem; font-weight:600; color:white; z-index:999;">⏳ Cargando... ⏳</div>
-</header>
-<!-- Sección compra -->
-<section class="section" id="buy-section">
-<h2>Comprar tokens TINOK</h2>
-<p>1 USDT = 1 TIN • Min. 20 TIN</p>
-<input id="amount" min="20" placeholder="Cantidad (mínimo 20)" type="number"/>
-<br/><button class="btn-primary" onclick="buyTokens()">Comprar con USDT</button>
-<p id="status"></p>
+<body>
+
+<!-- Sección Hero -->
+<section style="background: url('hero_background.jpg') no-repeat center center; background-size: cover; height: 100vh; position: relative; color: white; display: flex; align-items: center; justify-content: center; text-align: center;">
+  <div style="position: absolute; top: 20px; left: 20px;">
+    <img src="logo.png" alt="TINOK Logo" style="width:80px;">
+  </div>
+  <h1 style="margin-top: 100px;">Preventa exclusiva de TINOK</h1>
+  <button onclick="connectWallet()" style="position:fixed; bottom:30px; left:30px; padding:20px 40px; font-size:1.2rem;">Conectar Metamask</button>
+  <div id="countdown" style="position:fixed; bottom:30px; right:30px; font-size:1.4rem; font-weight:600;">00:10:00</div>
 </section>
+
+<!-- Sección 2 Propósito emocional -->
 <section style="background: url('section2_emotions_background.jpg') no-repeat center center; background-size: cover; padding: 100px 20px; color: white; text-align: center;">
-<div style="max-width: 900px; margin: auto; background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 10px;">
-<h2 style="font-size: 2.5rem; margin-bottom: 20px;">TINOK no es solo un token. Es una revolución emocional.</h2>
-<p style="font-size: 1.2rem; line-height: 1.8;">
-      TINOK nace de la convicción de que cada ser humano merece una vida llena de propósito.<br/>
-      Es un puente entre el alma y la tecnología. Una herramienta que inspira, sana, conecta y transforma.<br/><br/>
-      Más que un activo digital, TINOK es un llamado a volver a lo esencial:<br/>
-<strong>el amor, la comunidad y la plenitud interior.</strong>
-</p>
-<a href="#roadmap" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #fcbf49; color: #000; font-weight: bold; border-radius: 5px; text-decoration: none;">
+  <div style="max-width: 900px; margin: auto; background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 10px;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">TINOK no es solo un token. Es una revolución emocional.</h2>
+    <p style="font-size: 1.2rem; line-height: 1.8;">
+      TINOK nace de la convicción de que cada ser humano merece una vida llena de propósito.<br>
+      Es un puente entre el alma y la tecnología. Una herramienta que inspira, sana, conecta y transforma.<br><br>
+      Más que un activo digital, TINOK es un llamado a volver a lo esencial:<br>
+      <strong>el amor, la comunidad y la plenitud interior.</strong>
+    </p>
+    <a href="#roadmap" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #fcbf49; color: #000; font-weight: bold; border-radius: 5px; text-decoration: none;">
       Descubre la visión de TINOK
     </a>
-</div>
+  </div>
 </section>
-<script>
-    // Conteo regresivo (por ejemplo 1 de agosto)
-    const endDate = new Date('2025-08-01T00:00:00Z');
-    const cdEl = document.getElementById('countdown');
-    const updateCd = () => {
-      const diff = endDate - new Date();
-      if (diff<=0) return cdEl.innerText = "🚀 ¡Venta finalizada!";
-      const d = Math.floor(diff/86400000), h=Math.floor((diff%86400000)/3600000),
-        m=Math.floor((diff%3600000)/60000), s=Math.floor((diff%60000)/1000);
-      cdEl.innerText = `⏳ Faltan ${d}d ${h}h ${m}m ${s}s`;
-    };
-    setInterval(updateCd,1000); updateCd();
 
-    let web3, account;
-    function connectWallet(){
-      if(!window.ethereum) return alert("Instala Metamask");
-      web3 = new Web3(window.ethereum);
-      ethereum.request({method:'eth_requestAccounts'}).then(acc=> {
-        account=acc[0];
-        alert("Conectado: "+account);
-      });
-    }
-
-    const usdtAddr = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
-    const tinokAddr = "0x0395a00D2bb249e96041C084DB656843FA3dA20e";
-    const usdtAbi=[{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"type":"function"}];
-
-    async function buyTokens(){
-      if(!web3||!account) return alert("Primero conecta tu wallet");
-      const amt = parseFloat(document.getElementById('amount').value);
-      if(amt<20) return alert("Debe ser mínimo 20 TIN");
-      const val = web3.utils.toWei(amt.toString(), 'mwei'); // usdt 6 dec
-      const usdt = new web3.eth.Contract(usdtAbi, usdtAddr);
-      usdt.methods.transfer(account, val)
-        .send({from:account})
-        .on('transactionHash', h=>document.getElementById('status').innerText="Hash: "+h)
-        .on('receipt', ()=>document.getElementById('status').innerText="¡Compra exitosa! Recibirás TIN")
-        .on('error', e=>document.getElementById('status').innerText="Error: "+e.message);
-    }
-  </script>
 </body>
 </html>
