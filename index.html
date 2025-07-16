@@ -4,175 +4,27 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TINOK Token</title>
-<style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    section {
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
-<!-- Sección Hero -->
-<section style="background: url('hero_background.jpg') no-repeat center center; background-size: cover; height: 100vh; position: relative; color: white; display: flex; align-items: center; justify-content: center; text-align: center;">
-<div style="position: absolute; top: 20px; left: 20px;">
-<img alt="TINOK Logo" src="logo.png" style="width:80px;"/>
-</div>
-<h1 style="margin-top: 100px;">Preventa exclusiva de TINOK</h1>
-<button onclick="connectWallet()" style="position:fixed; bottom:30px; left:30px; padding:20px 40px; font-size:1.2rem; background-color:#ff9800; color:#fff; border:none; border-radius:8px; cursor:pointer; box-shadow:0 4px 6px rgba(0,0,0,0.3);">Conectar Metamask</button>
-<div id="countdown" style="position:fixed; bottom:30px; right:30px; font-size:1.4rem; font-weight:600; color:#fcbf49; background-color:rgba(0,0,0,0.6); padding:10px 20px; border-radius:10px;">⏰ 00:10:00</div>
-</section>
-<!-- Sección 2 Propósito emocional -->
-<section style="background: url('section2_emotions_background.jpg') no-repeat center center; background-size: cover; padding: 100px 20px; color: white; text-align: center;">
-<div style="max-width: 900px; margin: auto; background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 10px;">
-<h2 style="font-size: 2.5rem; margin-bottom: 20px;">TINOK no es solo un token. Es una revolución emocional.</h2>
-<p style="font-size: 1.2rem; line-height: 1.8;">
-      TINOK nace de la convicción de que cada ser humano merece una vida llena de propósito.<br/>
-      Es un puente entre el alma y la tecnología. Una herramienta que inspira, sana, conecta y transforma.<br/><br/>
-      Más que un activo digital, TINOK es un llamado a volver a lo esencial:<br/>
-<strong>el amor, la comunidad y la plenitud interior.</strong>
-</p>
-<a href="#roadmap" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #fcbf49; color: #000; font-weight: bold; border-radius: 5px; text-decoration: none;">
-      Descubre la visión de TINOK
-    </a>
+<section id="section1">Sección 1: Hero</section>
+<section id="section2">Sección 2: Imagen emocional</section>
+<section id="section3">Sección 3: Beneficios</section>
+<section id="section4">Sección 4: Roadmap</section>
+<section id="section5">Sección 5: Tokenomics</section>
+<section id="section6">Sección 6: FAQ</section>
+<section style="background: #fff9f2; padding: 100px 20px; text-align: center;">
+<h2 style="font-size: 2.5rem; color: #444; margin-bottom: 40px;">“Donde otros ven una app, yo veo una misión”</h2>
+<div style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: #333; line-height: 1.8;">
+<p>TINOK nació en el momento más oscuro de mi vida: la pérdida de mi hijo no nacido. En ese vacío, sentí una profunda soledad, pero también una voz que me dijo: transforma este dolor en propósito.</p>
+<p>Desde entonces, entendí que no estoy solo… y tú tampoco.</p>
+<p>Esta app no es solo tecnología, es un abrazo digital, una comunidad, una familia. Es un espacio donde el alma encuentra compañía, dirección y sanación.</p>
+<p><strong>Invertir en TINOK no es solo apoyar un proyecto, es sembrar esperanza.</strong></p>
+<p>Porque cada token no solo vale en el mercado, también vale en vidas restauradas.</p>
+<br/>
+<p style="font-weight: bold; font-style: italic;">— Willy Leandro, Fundador de TINOK</p>
 </div>
 </section>
-<section style="background: #f9f9f9; padding: 80px 20px; text-align: center; color: #333;">
-<h2 style="font-size: 2.5rem; margin-bottom: 40px;">¿Por qué TINOK? Porque mereces más que un token... mereces una transformación.</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: auto;">
-<div style="flex: 1 1 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3>❤️ Bienestar emocional 24/7</h3>
-<p>Accede a consejeros y apoyo cuando más lo necesites.</p>
-</div>
-<div style="flex: 1 1 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3>💪 Transformación física y mental</h3>
-<p>Entrenamientos y contenidos para cuerpo y mente con propósito.</p>
-</div>
-<div style="flex: 1 1 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3>🧘‍♂️ Crecimiento espiritual real</h3>
-<p>Devocionales y guía espiritual auténtica desde la fe.</p>
-</div>
-<div style="flex: 1 1 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3>🌎 Comunidad empática</h3>
-<p>Encuentra apoyo, conexión y propósito en comunidad.</p>
-</div>
-<div style="flex: 1 1 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3>🎁 Recompensas reales</h3>
-<p>Gana TIN por avanzar en tu bienestar y ayudar a otros.</p>
-</div>
-<div style="flex: 1 1 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3>📈 Token con propósito</h3>
-<p>Accede a un ecosistema completo con utilidad real.</p>
-</div>
-</div>
-</section>
-<section style="background: #ffffff; padding: 100px 20px; text-align: center;">
-<h2 style="font-size: 2.5rem; color: #333; margin-bottom: 40px;">Nuestro Camino: Roadmap TINOK</h2>
-<img alt="Roadmap TINOK" src="tinok_roadmap.png" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);"/>
-</section>
-<section style="background: #f9f9f9; padding: 100px 20px; text-align: center;">
-<h2 style="font-size: 2.5rem; color: #333; margin-bottom: 40px;">Economía del Token: Tokenomics TINOK</h2>
-<img alt="Tokenomics TINOK" src="tinok_tokenomics.png" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);"/>
-</section>
-<!-- SECCIÓN 6: FAQ (Preguntas Frecuentes) -->
-<section class="faq-section" id="faq">
-<h2>Preguntas Frecuentes</h2>
-<div class="faq-item">
-<h3><button aria-controls="faq1" aria-expanded="false" class="faq-question">¿Qué es TINOK y cuál es su propósito?<span class="icon">+</span></button></h3>
-<div aria-labelledby="faq1-heading" class="faq-answer" hidden="" id="faq1" role="region">
-<p>TINOK es un token creado para impulsar una revolución emocional y espiritual, facilitando el acceso a herramientas de bienestar integral a través de nuestra plataforma.</p>
-</div>
-</div>
-<div class="faq-item">
-<h3><button aria-controls="faq2" aria-expanded="false" class="faq-question">¿Cómo puedo participar en la preventa?<span class="icon">+</span></button></h3>
-<div aria-labelledby="faq2-heading" class="faq-answer" hidden="" id="faq2" role="region">
-<p>Solo necesitas conectar tu wallet MetaMask en nuestra web, seleccionar la cantidad de TIN que deseas comprar y completar la transacción con USDT.</p>
-</div>
-</div>
-<div class="faq-item">
-<h3><button aria-controls="faq3" aria-expanded="false" class="faq-question">¿Dónde puedo usar los tokens TIN?<span class="icon">+</span></button></h3>
-<div aria-labelledby="faq3-heading" class="faq-answer" hidden="" id="faq3" role="region">
-<p>Podrás usar tus TIN para acceder a servicios premium dentro de nuestra app: asesorías, entrenamientos, contenido exclusivo y mucho más.</p>
-</div>
-</div>
-<div class="faq-item">
-<h3><button aria-controls="faq4" aria-expanded="false" class="faq-question">¿Es seguro invertir en TINOK?<span class="icon">+</span></button></h3>
-<div aria-labelledby="faq4-heading" class="faq-answer" hidden="" id="faq4" role="region">
-<p>Sí. Nuestro contrato fue desarrollado bajo estándares seguros y el proyecto es completamente transparente. Además, la plataforma contará con auditorías externas.</p>
-</div>
-</div>
-<div class="faq-item">
-<h3><button aria-controls="faq5" aria-expanded="false" class="faq-question">¿Qué beneficios obtengo como inversor?<span class="icon">+</span></button></h3>
-<div aria-labelledby="faq5-heading" class="faq-answer" hidden="" id="faq5" role="region">
-<p>Obtienes acceso anticipado, beneficios exclusivos en la plataforma y la posibilidad de hacer crecer tu inversión a medida que la comunidad se expanda.</p>
-</div>
-</div>
-<div class="faq-item">
-<h3><button aria-controls="faq6" aria-expanded="false" class="faq-question">¿Qué hace único a TINOK frente a otros proyectos?<span class="icon">+</span></button></h3>
-<div aria-labelledby="faq6-heading" class="faq-answer" hidden="" id="faq6" role="region">
-<p>TINOK no es solo una inversión: es una causa emocional, un propósito. Combinamos tecnología, comunidad y propósito para crear algo verdaderamente transformador.</p>
-</div>
-</div>
-</section>
-<style>
-  .faq-section {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 1rem;
-  }
-  .faq-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .faq-item {
-    margin-bottom: 1rem;
-  }
-  .faq-question {
-    width: 100%;
-    background-color: #f0f8ff;
-    border: none;
-    font-size: 1.1rem;
-    padding: 1rem;
-    text-align: left;
-    cursor: pointer;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  }
-  .faq-question .icon {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  .faq-question[aria-expanded="true"] .icon {
-    transform: rotate(45deg);
-  }
-  .faq-answer {
-    background: #fff;
-    padding: 1rem;
-    border: 1px solid #eee;
-    border-top: none;
-    display: block;
-  }
-</style>
-<script>
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      const answer = document.getElementById(btn.getAttribute('aria-controls'));
-      answer.hidden = expanded;
-      btn.querySelector('.icon').textContent = expanded ? '+' : '–';
-    });
-  });
-</script>
 
 </body>
 </html>
